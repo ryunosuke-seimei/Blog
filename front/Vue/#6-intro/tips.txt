@@ -1,0 +1,42 @@
+v-on:~~~
+はJQueryのonと等しいため
+changeやscrollといったイベントを検知することができる
+
+event修飾詞があるから右のボタンを押した時など限定的なイベント発火が行える
+
+stopはイベントのバブリングを制御する
+https://qiita.com/TomoProg/items/f32d01b019d7eea477af
+↑バブリングとは？
+要約すると
+親要素と子要素にそれぞれイベントが定義されている場合、子要素のみのイベントを発火させたいなどの限定的や特殊動作について
+
+stopの対比でcaptureがある！
+先に動作させたいとかの時！
+
+self
+capture
+stop
+native
+prevent
+色々あるけど　使うときに調べる！！
+
+
+特定のkeyが打たれたときに処理を紐づけることができる
+processingでいう keyPressed的なやつ
+全体監視orインプット要素のエンターキー監視的な
+入力値チェックとかに良さそう！！
+enter tab space とかいろ監視できる感じ
+
+bindは方方向の連結だけども
+modelを使うと、双方向の連結が可能になる？
+でもほかっちからいじれない可能性あり
+imgは唯一使えないから、changeを使って従来の方法を試そうね！！！
+
+modelにも修飾詞が存在するけど注意点もあるよ
+https://jp.vuejs.org/v2/guide/forms.html
+↑公式tips
+trimが動かない？謎！！
+
+
+scroll系の処理が曖昧かも
+これはheader固定をしたい時とかに使えるんじゃ？
