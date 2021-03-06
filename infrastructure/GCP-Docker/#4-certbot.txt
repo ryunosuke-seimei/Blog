@@ -1,0 +1,7 @@
+
+sudo apt install certbot
+sudo certbot certonly --standalone
+https://www.server-world.info/query?os=Ubuntu_20.04&p=ssl&f=2
+https://qiita.com/samiii/items/5910a4431ed8fe8fb96d
+
+とりあえずローカルでDockerをもっと深めような！！

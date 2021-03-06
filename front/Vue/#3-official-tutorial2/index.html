@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>まずはデータを表示</title>
+</head>
+<body>
+  <h3>条件分岐</h3>
+  <div id="app1">
+    {{message.length > 10 ? "true":"false"}}
+  </div>
+
+  <h3>test</h3>
+  <div id="app2">
+    <p>{{count}}回クリックしたよ！</p>
+    <button v-on:click="increment">button</button>
+  </div>
+
+  <h3>images</h3>
+  <div id="app3">
+    <img v-bind="item">
+    <!-- <img v-bind:alt="item.alt"> -->
+  </div>
+
+  <h3>条件分岐</h3>
+  <div id="app4">
+    <div v-if="ok">
+      ifでの条件式
+    </div>
+    <div v-show="ok">
+      showでの条件式
+    </div>
+  </div>
+
+  <h3>if elseif else</h3>
+  <div id="app5">
+    <div v-if="type=='A'">
+      type A
+    </div>
+    <div v-else-if="type=='B'">
+      type B
+    </div>
+    <div v-else>
+      全てはelse
+    </div>
+  </div>
+
+  <!-- <h3>if elseif else key</h3>
+  <div id="app6">
+    <div v-if="loaded" key="content-visible">
+      content
+    </div>
+    <div v-else key="content-loading">
+      loading now ...
+    </div>
+  </div> -->
+
+  <div id="app6">
+    名前:<input v-model="name">
+    <button v-on:click="doAdd">モンスターを追加する</button>
+    <ul>
+      <!-- <li v-for="item in list" v-bind:key="item.id" v-if="item.hp > 300"> -->
+      <!-- <li v-for="(item, index) in list" v-bind:key="item.id" v-if="item.hp > 300"> -->
+      <li v-for="(item, index) in list" v-bind:key="item.id">
+
+        ID.{{item.id}}{{item.name}} HP.{{item.hp}}
+
+        <span v-if="item.hp < 50">瀕死</span>
+        <button v-on:click="doAttack(index)">攻撃する</button>
+        <button v-on:click="doRemove(index)">モンスターを削除</button>
+      </li>
+    </ul>
+  </div>
+
+<script src="../js/vue.js" charset="utf-8"></script>
+<script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>

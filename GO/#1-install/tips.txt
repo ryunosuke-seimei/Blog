@@ -1,0 +1,16 @@
+https://qiita.com/notchi/items/5f76b2f77cff39eca4d8
+↑インストール
+
+https://qiita.com/unokun/items/dcf3ed4fbc4f532f664a
+↑Goのファーストステップ
+
+
+sample link
+https://qiita.com/notchi/items/5f76b2f77cff39eca4d8
+https://qiita.com/unokun/items/dcf3ed4fbc4f532f664a#nginx%E3%81%AE%E8%A8%AD%E5%AE%9A
+https://qiita.com/sunnyG/items/cabc700e6d9a28219cc8
+https://qiita.com/int_main_Nick/items/c0550239081b67f43d18
+https://www.naka-sys.okinawa/nginx-golang-reverse-proxy/
+https://www.naka-sys.okinawa/nginx-nodejs/
+https://qiita.com/Suzuki09/items/6e590155e2f3faa1de16#%E6%A6%82%E8%A6%81
+https://www.atmarkit.co.jp/ait/articles/1708/24/news022.html

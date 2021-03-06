@@ -1,0 +1,23 @@
+https://cr-vue.mio3io.com/tutorials/todo.html
+↑とりあえずのTODO
+https://qiita.com/moonglows76/items/358ef3cd1566c38ece3a
+↑わかりやすいQiita
+
+https://quartet-communications.com/info/topics/7165
+↑label
+でチェクボックスをクリックすると文のところもクリックできるようになる
+
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+↑Javascript fillterについて
+配列全てに関数を適応して、条件に合致したものを新配列として出力
+ぐう有能！！ python でいう　map的なやつ
+
+総じて
+Vue.jsぐう有能！！
+やばすぎ
+
+methodの管理とデータ構造の管理を単体で行うことができるので、コンポーネントごとの処置をとても描きやすい
+moutedでwindow.onloadと同等のことができるため
+コードがとてもみやすい　優秀すぎる！！
+
+とりあえず、Vueでのプロジェクトを作ってみる

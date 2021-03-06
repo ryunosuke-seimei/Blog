@@ -1,0 +1,158 @@
+https://help.sakura.ad.jp/206053782/
+https://www.amamoba.com/pc/sakura-value.html
+↑若干情報が古い気もするけど
+https://www.logw.jp/server/dns/2003.html
+↑めっちゃ古いけど
+https://srcw.net/wiki/?%E3%81%95%E3%81%8F%E3%82%89%E3%81%AEVPS
+↑みづらいけど
+[この辺は資料が出てこないから、最新写真が必要かも]
+
+まずバリュードメインでドメインを購入する
+バリュードメインのDNSを桜のDNSに変更する
+桜側でドメインの受け入れをする
+あとVPSの逆引きホストを設定する
+
+https://www.google.com/search?q=nslookup+command+%E4%BD%BF%E3%81%84%E6%96%B9&rlz=1C5CHFA_enJP894JP894&oq=nslookup+command+%E4%BD%BF%E3%81%84%E6%96%B9&aqs=chrome..69i57j0i13.6003j0j7&sourceid=chrome&ie=UTF-8
+↑nslookupの使い方
+
+nslookupで確認する
+表示されてたらOk
+もしかして表示されないな〜って思ったら１時間ぐらい放置か
+VPSを再起動してみる
+
+SSH で入れるか？
+ubutuを作った場合は
+ssh ubuntu@ip
+password
+
+入れたよ！
+sudo apt update
+お約束コマンドを入れるよ
+
+次は自分のユーザを作るお
+
+まずrootになるお
+sudo su
+作るお
+adduser ユーザネーム
+sudoってコマンドの権限をあげるよ
+usermod -aG sudo ryu
+
+一旦サーバーから出てみるよ
+exit
+って打つとなんかかっこいいよね
+rootで入っていたら2回コマンドを打たないと出れないよ
+
+ssh ユーザー名@ip
+入れたよ！
+次にsudoも使えるかチェックだお
+sudo su
+わーい！！
+
+公開鍵で入るようにするよ
+毎回パスワード打つのが面倒だけど、ちょっとセキュリティ意識低いんじゃない？って言われたくないよ
+なんならパスワードを打たなくても、私のパソコンからしか入れないようにしてやる！的な
+実際は鍵が流出したら入れるからパソコンのセキュリティも上げようね
+
+ここから先は自分で作ったユーザーでやりとりしていくよ！！
+ここ意外と重要だよ！楽だからってroot と　ubuntuでやったりしたらダメだからね！！
+とか言ってもやる人がいるから（昔の僕）、何回も言っておくね
+
+まず鍵を作るよ
+鍵について
+https://milestone-of-se.nesuke.com/sv-advanced/digicert/public-private-key/
+↑サンプル
+
+https://qiita.com/suthio/items/2760e4cff0e185fe2db9
+↑結構な猛者
+
+ssh-keygen -t rsa -b 4096 -C "MailAddress"
+
+コマンドの意味はあんまりわかんないけど
+もし君が初めてサーバーを設定するなら、全部エンターキーを押したらとりあえずは作られるよ！！
+id_rsaって名前になるから大丈夫！　MailAddressは自分のを入れておいてね
+
+とりあえず
+ls .ssh -a
+でid_rsaとid_rsa.pubができているかのチェックをしよう
+
+https://qiita.com/chihiro/items/142ebe6980a498b5d4a7
+↑scpのサンプル
+
+scp .ssh/id_rsa.pub ユーザ名@ip:~/
+できていたらコピーができるはずだよ！
+ここで重要なのは.pubっていう点でここは公開鍵と秘密鍵って概念だから調べてみるといいかも
+https://milestone-of-se.nesuke.com/sv-advanced/digicert/public-private-key/
+↑サンプルもう一回置いとくね
+念のために置いとくね！
+簡単に訳すとid_rsaをあげたらやべえってこと！
+もし通しちゃった場合は、どれかをやってね
+・VMを飛ばして一から作る
+・鍵を作り直す
+・VMにあげた方の鍵を削除
+
+できなかったら最初から手順を丁寧にやり直してもいいし
+誰かに聞くのもいいかも！！
+僕の記事が間違っていたらまじごめん！！！
+
+ほんでscpのコマンドがうまく言ってたらsshでサーバーに入ろうね
+そろそろコマンド覚えてきた？？
+なんかかっこよくない？_？
+ほんで
+ls
+打ったらコピーされてない？？
+
+されてる？最高じゃんもう天才！！
+されてない？大丈夫！！僕はこの工程4回失敗しているから、あと3回以内にできたら僕より優秀！
+次行くよ〜
+
+ssh で入ってるじゃん！
+こっからはコマンドゲームだからね！
+ちょこっと解説するね
+
+mkdir .ssh
+chmod 700 .ssh
+cat id_laravel_test.pub >> .ssh/authorized_keys
+chmod 600 .ssh/authorized_keys
+rm -fv id_laravel_test.pub
+
+ll
+コマンドを打って確認
+drwx------ 2 ryu ryu  4096 Feb 27 19:12 .ssh/
+cd .ssh
+ll
+-rw------- 1 ryu ryu  748 Feb 27 19:12 authorized_keys
+
+ここまできたらひと段落！
+
+でもまずは鍵認証で入れるかのテスト
+ssh ユーザ名@ip -i .ssh/id_rsa
+これで入れたらあなたは神！！
+
+次はpasswordでの認証を変更して鍵認証だけにする
+https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04-ja.amp
+↑ここのいっちゃんしたらへん
+viのコマンドを覚えてるといいかもだけど
+https://eng-entrance.com/linux-command-vi
+↑めちゃめちゃ怖すぎる
+
+sudo vi /etc/ssh/sshd_config
+- PasswordAuthentication no
++ PasswordAuthentication yes
+sudo systemctl restart ssh
+
+sshのポートを変更するで
+https://freepc.jp/post-31574
+↑22番とか80番とか聞いたことない？いいよね変更しよ
+https://freepc.jp/post-31574
+https://freepc.jp/post-42705?amp=1
+
+sudo vi /etc/ssh/sshd_config
+- Port 22
++ Port 2222
+sudo sshd -t
+sudo systemctl restart sshd
+sudo ufw status
+sudo ufw restart
+
+ubuntuだと考えることが楽でいいね

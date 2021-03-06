@@ -1,0 +1,33 @@
+https://qiita.com/kurkuru/items/127fa99ef5b2f0288b81
+やったこと
+・Docker for Mac のインストール
+・Nginxを入れてみて起動から削除まで
+
+
+docker run -d -p 80:80 --name webserver nginx
+作成とスタート
+もしエラーが起きたらDockerのMacにログインしようね
+
+docker container ls
+起動確認
+http://localhost/
+アクセス確認
+
+docker container stop webserver
+止める
+
+docker container start webserver
+再起動
+
+docker container ls -a
+全て表示
+
+docker container rm {コンテナ名}
+
+
+docker image rm {image id of name}
+削除
+docker image ls
+
+
+一旦ここまで

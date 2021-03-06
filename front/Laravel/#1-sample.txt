@@ -1,0 +1,11 @@
+https://qiita.com/niisan-tokyo/items/264d4e8584ed58536bf4
+https://qiita.com/miriwo/items/4b78e91cec083509a5e7
+https://qiita.com/dublog/items/803516e2ecf998230f9a
+https://readouble.com/laravel/7.x/ja/testing.html
+https://readouble.com/laravel/7.x/ja/database-testing.html
+
+
+https://www.rem-system.com/centos-nginx-inst/#7
+https://mariadb.com/ja/resources/blog/install-mariadb-server-centos7/
+https://qiita.com/ponsea/items/9578659009b434c60959
+https://qiita.com/knife0125/items/3d685f1368a654d5187d

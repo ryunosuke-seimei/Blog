@@ -1,0 +1,29 @@
+apt-get update
+
+https://qiita.com/kotaroooo0/items/c4b3b24ea8e9907b5b74
+↑コマンド週
+
+Docker install
+$ apt-get install curl
+$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sudo sh get-docker.sh
+$ systemctl start docker
+
+git install
+$ apt-get install git
+
+https://tyablog.net/2019/01/04/ubuntu-18-04-lts-install-docker/
+↑Dockerのセットアップ
+めっちゃ有用
+
+
+いったんわかんなくなったからAppatchでGCEの設定をしてみる
+https://cloud.google.com/dns/docs/tutorials/create-domain-tutorial?hl=ja
+
+とりあえずノリと勢いでGoogleのDomainを契約しちゃおう！
+やってみて失敗しようぜ
+
+CloudDNSを有効にしようぜ
+
+とりあえずドメインが登録できてNginxのコンテナが動いたドン
+reina-craft.com

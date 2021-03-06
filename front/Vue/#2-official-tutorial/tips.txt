@@ -1,0 +1,11 @@
+https://jp.vuejs.org/v2/guide/
+↑公式ガイド
+
+https://www.hypertextcandy.com/vue-laravel-tutorial-setting-up-spa-project/#fn-(*1)
+↑はるるんおすすめ
+
+https://forum.vuejs.org/
+↑質問コミュず
+
+
+ファーストtips

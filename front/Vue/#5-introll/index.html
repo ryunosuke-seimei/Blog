@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>まずはデータを表示</title>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <p ref="hello">Hello</p>
+  </div>
+
+  <div id="app1">
+    <span v-text="message"></span>
+  </div>
+
+  <div id="app2">
+    <span v-html="message"></span>
+  </div>
+
+  <div id="app3" v-cloak>
+    {{message}}
+  </div>
+
+<script src="../js/vue.js" charset="utf-8"></script>
+
+<script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
