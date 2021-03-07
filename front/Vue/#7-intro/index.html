@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>まずはデータを表示</title>
+</head>
+<body>
+  <h3>算出プロパティ</h3>
+  <div id="app1">
+    {{width}}
+    <br>
+    {{halfWidth}}
+    <br>
+    {{halfPoint.x}}
+    {{halfPoint.y}}
+    <br>
+    <input type="number" v-model.number="halfWidth">
+    <br>
+    {{randomCompute}}
+    {{randomCompute}}
+    <br>
+    {{randomMethod()}}
+    {{randomMethod()}}
+  </div>
+
+  <h3>list絞り込み</h3>
+  <div id="app2">
+    <input v-model.number="budget"> 円以下に絞り込む
+    <input v-model.number="limit"> 件を表示
+    <p>{{ matched.length }} 件中 {{ limited.length }} 件を表示中</p>
+    <ul>
+      <!-- v-forでは最終結果、算出プロパティのlimitedを使用する -->
+      <li v-for="item in limited" v-bind:key="item.id">
+        {{ item.name }} {{ item.price }}円
+      </li>
+    </ul>
+  </div>
+
+  <h3>wather</h3>
+  <div id="app3">
+    <input v-model="number">
+    {{number}}
+    <br>
+    <input v-model="numbers">
+    {{numbers}}
+  </div>
+
+  <h3>wather sample</h3>
+  <div id="app4">
+    <select v-model="current">
+      <option v-for="topic in topics" v-bind:value="topic.value">
+        {{ topic.name }}
+      </option>
+    </select>
+    <div v-for="item in list">{{ item.full_name }}</div>
+  </div>
+
+  <h3>fillter</h3>
+  <div id="app5">
+    180 度は {{ 180 | radian | round }} ラジアンだよ
+  </div>
+
+<script src="../js/vue.js" charset="utf-8"></script>
+<script src="../js/axios.js" charset="utf-8"></script>
+
+<script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
