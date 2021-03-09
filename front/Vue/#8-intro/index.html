@@ -7,7 +7,43 @@
   <title>まずはデータを表示</title>
 </head>
 <body>
-  
+  <h3>コンポーネント使用方法</h3>
+  <div id="app1">
+    <my-component></my-component>
+  </div>
+
+  <h4>引用方法　書いていない版！</h4>
+  <div id="app2">
+    <comp-child :val="valueA"></comp-child>
+    <comp-child :val="valueB"></comp-child>
+  </div>
+
+  <h3>子からのイベントと親のイベントを紐付ける？</h3>
+  <div id="app3">
+    <comp-child v-on:childs-event="parentsMethod"></comp-child>
+  </div>
+
+  <h3>slotを使用してみる</h3>
+  <div id="app4">
+    <my-component>
+      <template slot="one">
+        aaa
+      </template>
+      <template slot="two">
+        bbb
+      </template>
+    </my-component>
+  </div>
+
+  <h3>いろんな機能がある　切り替えとか共通処理とか</h3>
+  <div id="app5">
+    <button v-on:click="current^=1">コンポーネントを切り替え</button>
+    <div v-bind:is="component"></div>
+  </div>
+
+
+
+
 
 <script src="../js/vue.js" charset="utf-8"></script>
 <script src="../js/axios.js" charset="utf-8"></script>

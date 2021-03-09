@@ -1,0 +1,9 @@
+https://auto-worker.com/blog/?p=2460
+https://medium.com/anti-pattern-engineering/google-apps-script-gas-%E3%81%A7web%E3%82%B9%E3%82%AF%E3%83%AC%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0-dfd5408e0462
+↑スクレイピング　GAS
+
+https://auto-worker.com/blog/?p=609
+↑認証の通し方
+
+https://tonari-it.com/gas-spreadsheet-insertrows-splice/
+↑スプレッドシート書き込み
