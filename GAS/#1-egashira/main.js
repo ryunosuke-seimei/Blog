@@ -1,4 +1,4 @@
-function myFunction() {
+function GAS_() {
   let path = "1gt6tgqvCzODV3bk5TLTj5idrV1EfwPVoJAPYW3w6z7w";
   let page = SpreadsheetApp.openById(path);
   let sheet = page.getSheetByName("シート1");
