@@ -3,8 +3,8 @@ new Vue({
   data:{
     title: "title",
     links:[
-      {title: "links1"},
-      {title: "links2"}
+      {id: 0, title: "links1", link:"A_ link"},
+      {id: 1, title: "links2", link:"B_ link"}
     ],
     pc_or_mobile_show: true,
     box_open_flag: false,
@@ -24,6 +24,9 @@ new Vue({
     clickSubBox: function(){
       this.box_open_flag = !this.box_open_flag;
       console.log(this.box_open_flag);
+    },
+    clickLink: function(index){
+      console.log(this.links[index].link);
     }
   },
 })

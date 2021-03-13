@@ -7,3 +7,7 @@ axios.get("https://www.reina-ryu-f.xyz/sword/HIIT/main.php").then(function(respo
 ajax?に変わるやつ？？
 
 動いたわ！！
+
+
+https://qiita.com/chenglin/items/f59a6daff76fa0f582af
+↑AXIOSのパラメータ
