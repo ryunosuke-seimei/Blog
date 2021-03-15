@@ -34,14 +34,21 @@ new Vue({
         this.form_list[i-2].value = temp_data[i];
       }
     },
-    valueGather:function(){
-      let data = {
+    sendEdit:function(){
+      let send_data = {
         "id": this.id,
         "title": this.title,
         "data": this.form_list
       }
-      console.log(data);
-      this.ApiUpdate(JSON.stringify(data));
+      console.log(send_data);
+      this.ApiUpdate(JSON.stringify(send_data));
+    },
+    sendDelete: function(){
+      let send_data = {
+        "id": String(this.id),
+      }
+      console.log(send_data);
+      this.ApiDelete(JSON.stringify(send_data));
     },
     ApiGetAll: function(){
       let temp_data = [];
@@ -77,16 +84,14 @@ new Vue({
     },
     ApiUpdate: function(data){
       axios.put(this.link, {data}).then(function(response){
-        location.reload();
+        // location.reload();
       }.bind(this)).catch(function(e){
         console.log(e);
       });
     },
-    ApiDelete: function(){
-      axios.delete(this.link, {id: this.id}).then(function(response){
-
+    ApiDelete: function(data){
+      axios.delete(this.link, {data}).then(function(response){
         console.log(response);
-
       }.bind(this)).catch(function(e){
         console.log(e);
       });

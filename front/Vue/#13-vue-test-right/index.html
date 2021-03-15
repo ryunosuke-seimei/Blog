@@ -19,8 +19,8 @@
     <div class="right">
       <input type="text" v-bind:value="title">
       <input type="text" v-for="(form, index) in form_list" v-model="form.value">
-      <input type="button" v-bind:value="edit_value" v-on:click="valueGather">
-      <input type="button" v-bind:value="delete_value" v-on:click="ApiDelete">
+      <input type="button" v-bind:value="edit_value" v-on:click="sendEdit">
+      <input type="button" v-bind:value="delete_value" v-on:click="sendDelete">
     </div>
   </div>
 
