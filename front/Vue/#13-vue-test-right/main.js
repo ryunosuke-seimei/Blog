@@ -36,19 +36,21 @@ new Vue({
     },
     sendEdit:function(){
       let send_data = {
-        "id": this.id,
-        "title": this.title,
-        "data": this.form_list
+        id: this.id,
+        title: this.title,
+        data: this.form_list
       }
       console.log(send_data);
       this.ApiUpdate(JSON.stringify(send_data));
+      // this.ApiUpdate(send_data);
     },
     sendDelete: function(){
       let send_data = {
-        "id": String(this.id),
+        id: this.id
       }
       console.log(send_data);
       this.ApiDelete(JSON.stringify(send_data));
+      // this.ApiDelete(send_data);
     },
     ApiGetAll: function(){
       let temp_data = [];
@@ -83,14 +85,16 @@ new Vue({
       });
     },
     ApiUpdate: function(data){
-      axios.put(this.link, {data}).then(function(response){
+      console.log({data: data});
+      axios.put(this.link, {data:data}).then(function(response){
         // location.reload();
       }.bind(this)).catch(function(e){
         console.log(e);
       });
     },
     ApiDelete: function(data){
-      axios.delete(this.link, {data}).then(function(response){
+      console.log({data: data});
+      axios.delete(this.link, {data:data}).then(function(response){
         console.log(response);
       }.bind(this)).catch(function(e){
         console.log(e);

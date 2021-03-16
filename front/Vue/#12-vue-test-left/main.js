@@ -25,12 +25,14 @@ new Vue({
         "data": this.form_list
       }
       this.SendApi(JSON.stringify(data));
+      // this.SendApi(data);
+
     },
     SendApi: function(data){
       console.log(data);
-      axios.post(this.ink, {data}).then(function(response){
+      axios.post(this.ink, {data:data}).then(function(response){
 
-        console.log();
+        console.log(response);
 
       }.bind(this)).catch(function(e){
         console.log(e);
