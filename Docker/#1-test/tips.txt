@@ -1,27 +1,11 @@
-https://qiita.com/KONTA2019/items/1471e0a8c16811179d65
-↑とりあえずcomposeやってみる系のサンプル
-
 https://qiita.com/k-kurikuri/items/fe8d56e1d4bc96418576
 ↑Dockerの環境に入れない時
 
 https://qiita.com/YumaInaura/items/39abf610dc322e83d5b3
 ↑execとrunの違い
 
+https://qiita.com/KONTA2019/items/1471e0a8c16811179d65
+↑とりあえずcomposeやってみる系のサンプル
+
 https://qiita.com/roko18366758/items/50944d0d392419b601eb
 ↑docker-compose.ymlの書き方tips
-
-
-
-開くとき
-docker-compose up -d
-
-閉じる時
-docker-compose down
-
-観測するとき
-docker-compose ps -a
-
-gceの場合だとnginxの軌道にはGoogleのallowが必要になる！
-80と443はデフォで開けるからそこの二つはいいと思う！！
-
-左が大元で右がdocker上でのアクセス
