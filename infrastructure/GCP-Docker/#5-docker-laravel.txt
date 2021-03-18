@@ -1,12 +1,19 @@
-https://qiita.com/kyohmizu/items/5f1929a2e949a9fa0da8
-https://qiita.com/mochizukikotaro/items/1d28888b78f401227ed6
-dockerの内部に入ってこねくり回していく
+とりあえず動くサンプルを見つけることができた
 
-https://qiita.com/YumaInaura/items/3432cc3f8a8553e05a6e
-dockerの内部にVIMを入れ込んでいく方法
-うんやっぱりわからん
+https://qiita.com/KONTA2019/items/1471e0a8c16811179d65
+↑とりあえずcomposeやってみる系のサンプル
 
-さくらで勉強しろって書いてあるから勉強しよ
 
-https://tech-lab.sios.jp/archives/18811
-https://knowledge.sakura.ad.jp/13265/
+開くとき
+docker-compose up -d
+
+閉じる時
+docker-compose down
+
+観測するとき
+docker-compose ps -a
+
+gceの場合だとnginxの軌道にはGoogleのallowが必要になる！
+80と443はデフォで開けるからそこの二つはいいと思う！！
+
+左が大元で右がdocker上でのアクセス

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>まずはデータを表示</title>
+</head>
+
+<body>
+  <header id="header">
+    <div class="title">
+      {{title}}
+    </div>
+    <div class="sub-links" v-show="pc_or_mobile_show">
+      <li v-for="(link, index) in links" v-on:click="clickLink(index)">{{link.title}}</li>
+    </div>
+    <div class="sub-box" v-show="!pc_or_mobile_show" v-on:click="clickSubBox" v-bind:class="{ box_active: box_open_flag}">
+      <li></li>
+      <li></li>
+      <li></li>
+    </div>
+    <div class="sub-bords" v-show="!pc_or_mobile_show" v-bind:class="{ bords_active: box_open_flag}">
+      <li v-for="(link, index) in links" v-on:click="clickLink(index)">{{link.title}}</li>
+    </div>
+  </header>
+  <div class="left" id="left">
+    <input type="text" v-bind:value="title">
+    <input type="text" v-for="(form, index) in form_list" v-model="form.value">
+    <input type="button" v-bind:value="submit" v-on:click="valueGather">
+  </div>
+
+  <div class="right" id="right">
+    <div class="left">
+      <li v-for="form in data_list" v-on:click="clickItem(form.id)">No.{{form.id}}{{form.value}}</li>
+    </div>
+    <div class="right">
+      <input type="text" v-bind:value="title">
+      <input type="text" v-for="(form, index) in form_list" v-model="form.value">
+      <input type="button" v-bind:value="edit_value" v-on:click="sendEdit" v-show="show_flag">
+      <input type="button" v-bind:value="delete_value" v-on:click="sendDelete" v-show="show_flag">
+    </div>
+  </div>
+
+
+
+
+
+  <script src="../js/vue.js" charset="utf-8"></script>
+  <script src="../js/axios.js" charset="utf-8"></script>
+  <script src="../js/lodash.min.js" charset="utf-8"></script>
+
+  <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
