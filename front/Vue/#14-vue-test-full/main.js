@@ -164,9 +164,9 @@ new Vue({
       });
     },
     ApiUpdate: function(data){
-      console.log({data: data});
       axios.put(this.link, {data:data}).then(function(response){
         // location.reload();
+        this.data_list.find((v) => v.id === this.id).value = this.title;
 
       }.bind(this)).catch(function(e){
         console.log(e);
