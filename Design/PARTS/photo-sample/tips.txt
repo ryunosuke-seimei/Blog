@@ -1,0 +1,11 @@
+https://youtu.be/l9Me4mro0iQ
+いつもお世話になってます！！
+
+
+mix-blend-mode: screen;
+ここがマスク処理の肝になっている
+
+下にビデオを組み込むことができるので
+おんなじことで小窓からの表示的な使い方ができるのでは？
+
+autoplay muted loop videoにつけることができるオプション　おしゃ〜〜〜

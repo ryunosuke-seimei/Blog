@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Roulette</title>
+</head>
+
+<body>
+  <div id="timer">
+    <div class="timer">
+      <div class="time">
+        {{ formatTime }}
+      </div>
+      <button v-on:click="start" v-if="!timerOn">Start</button>
+      <button v-on:click="stop" v-if="timerOn">Stop</button>
+    </div>
+  </div>
+
+
+  <script src="../js/vue.js" charset="utf-8"></script>
+  <script src="../js/axios.js" charset="utf-8"></script>
+  <script src="../js/lodash.min.js" charset="utf-8"></script>
+
+  <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
