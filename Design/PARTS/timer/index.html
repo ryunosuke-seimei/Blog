@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Roulette</title>
+</head>
+
+<body>
+  <div id="timer">
+    <div class="timer">
+      <div class="time">
+        <span v-if="!timeupflag">{{ formatTime }}</span>
+        <span v-if="timeupflag">Time up</span>
+      </div>
+      <div class="time-count-box" v-bind:class="{'timeron': timerOn}">
+        <li v-on:click="min=1;sec=0" >1min</li>
+        <li v-on:click="min=5;sec=0" >5min</li>
+        <li v-on:click="min=10;sec=0">10min</li>
+      </div>
+      <div class="timer-controller-box">
+        <button v-on:click="start" v-if="!timerOn" class="start">Start</button>
+        <button v-on:click="stop" v-if="timerOn" class="stop">Stop</button>
+        <button v-on:click="reset" class="reset">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -3,8 +3,8 @@ new Vue({
   data:{
     param_min:1,
     param_sec:0,
-    min: 1,
-    sec: 0,
+    min: 0,
+    sec: 1,
     timerOn: false,
     timerObj: null,
     timeupflag: false,

@@ -12,10 +12,19 @@
   <div id="timer">
     <div class="timer">
       <div class="time">
-        {{ formatTime }}
+        <span v-if="!timeupflag">{{ formatTime }}</span>
+        <span v-if="timeupflag">Time up</span>
       </div>
-      <button v-on:click="start" v-if="!timerOn">Start</button>
-      <button v-on:click="stop" v-if="timerOn">Stop</button>
+      <div class="time-count-box">
+        <li v-on:click="min=1;sec=0" v-if="!timerOn">1min</li>
+        <li v-on:click="min=5;sec=0" v-if="!timerOn">5min</li>
+        <li v-on:click="min=10;sec=0" v-if="!timerOn">10min</li>
+      </div>
+      <div class="timer-controller-box">
+        <button v-on:click="start" v-if="!timerOn">Start</button>
+        <button v-on:click="stop" v-if="timerOn">Stop</button>
+        <button v-on:click="reset" >Reset</button>
+      </div>
     </div>
   </div>
 

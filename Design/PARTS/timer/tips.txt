@@ -1,0 +1,9 @@
+https://qiita.com/moriwm77/items/5d5430c80cfccd5fb397
+↑timerのサンプルというかtemplate
+
+v-bind:class="{'timeron': timerOn}"
+右が変数の左が付与するクラス名
+
+
+http://hiyoko-note.hatenablog.com/entry/2016/01/11/220000
+↑font-familyが効かない時の対処法
