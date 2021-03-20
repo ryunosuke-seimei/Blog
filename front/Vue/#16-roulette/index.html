@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Roulette</title>
+</head>
+
+<body>
+  <div id="app">
+    <div v-if="!roulette_flag">
+      {{left_title}}
+      {{right_title}}
+    </div>
+    <div>
+      {{left_display}}
+      {{right_display}}
+    </div>
+    <button type="button" v-on:click="start" v-if="!roulette_flag">start</button>
+    <button type="button" v-on:click="stop" v-if="roulette_flag">stop</button>
+
+    <button type="button" v-on:click="change_flag = !change_flag" v-if="!change_flag">変更</button>
+    <button type="button" v-on:click="change_flag = !change_flag" v-if="change_flag">閉じる</button>
+
+    <div class="bord" v-if="change_flag">
+      <button type="button" v-on:click=change_title>変更</button>
+      <div class="left" v-on:click="change_target = true">
+        {{left_title}}
+      </div>
+      <div class="right" v-on:click="change_target = false">
+        {{right_title}}
+      </div>
+      <div class="child-bord" v-if="change_detail">
+        <li v-for="(item, index) in data_list" v-on:click="select_title(index)">{{item.title}}</li>
+      </div>
+    </div>
+  </div>
+  <script src="../js/vue.js" charset="utf-8"></script>
+  <script src="../js/axios.js" charset="utf-8"></script>
+  <script src="../js/lodash.min.js" charset="utf-8"></script>
+
+  <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
