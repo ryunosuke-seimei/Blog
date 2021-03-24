@@ -1,0 +1,8 @@
+https://www.sejuku.net/blog/22432
+乱数の作り方
+
+axiosのなかでthisを使うとセッション占有問題が起きるので
+selfとして一旦thisを逃しておく
+
+https://qiita.com/mah666hhh/items/8114726a07a518408175
+↑vueで変数を渡す方法
