@@ -1,0 +1,11 @@
+https://youtu.be/ccO2B40zkv4
+sample
+
+text-transform: uppercase;
+大文字にする
+
+-webkit-text-stroke: 0vw #383d52;
+縁取りの太さとその色
+
+一つのテキストに重ねて表示をしてそれをCSSで動かしてあたかもいろがついているように見せている
+実際はテキストが表示されているだけ！！

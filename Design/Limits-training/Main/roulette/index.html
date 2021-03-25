@@ -55,6 +55,7 @@
         <button type="button" v-on:click="change_flag = !change_flag" v-if="!change_flag">変更</button>
         <button type="button" v-on:click="change_flag = !change_flag" v-if="change_flag">閉じる</button>
       </div>
+
       <div class="sub-view"　v-bind:class="{'subviewon': change_flag}">
         <div class="top">
           <button type="button" v-on:click=change_title>変更</button>

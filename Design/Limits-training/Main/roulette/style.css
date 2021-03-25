@@ -120,6 +120,9 @@ section{
   width: 100%;
   height: calc(100% - 60px);
   justify-content: space-around;
+
+  background-color: rgba(240, 230, 140, 0.5);
+
 }
 
 #timer, #roulette{
@@ -129,9 +132,10 @@ section{
   height: 50%;
   justify-content: center;
   align-items: center;
-  background-color: white;
   z-index: 11;
+  background-color: white;
 }
+
 .timer{
   position: relative;
   display: inline-flex;
@@ -222,9 +226,25 @@ section{
 .controller{
   flex: 0 0 auto;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 120px;
   height: 100%;
 }
+.controller button{
+  font-size: 20px;
+  display: inline-flex;
+  margin: 100px 0;
+  width: 80%;;
+  height: 50px;
+  border-radius: 20%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+
+  font-family: inherit;
+}
+
 .sub-view{
   position: absolute;
   display: inline-flex;
@@ -260,7 +280,28 @@ section{
   display: inline-flex;
   width: 500px;
   height: 40px;
+  align-items: center;
+  background-color: rgba(240, 230, 140, 0.5);
+  font-size: 20px;
 }
+.top div::before{
+  content: "title:";
+  margin: 0 10px;
+}
+.top button{
+  font-size: 20px;
+  display: inline-flex;
+  margin: 100px 0;
+  width: 200px;;
+  height: 80%;
+  border-radius: 20%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+
+  font-family: inherit;
+}
+
 .middle{
   display: inline-flex;
   justify-content: space-around;
@@ -270,11 +311,18 @@ section{
 }
 .middle div{
   display: inline-flex;
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   width: 500px;
   height: 100%;
+  background-color: rgba(240, 230, 140, 0.5);
+  font-size: 40px;
 }
+.middle .bord-active{
+  border: 5px solid orange;
+}
+
 .bottom{
   display: inline-flex;
   justify-content: center;
@@ -282,8 +330,23 @@ section{
   width: 100%;
   height: 50%;
 }
+.bottom button{
+  font-size: 20px;
+  display: inline-flex;
+  margin: 100px 0;
+  width: 200px;;
+  height: 20%;
+  border-radius: 20%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+
+  font-family: inherit;
+}
 .bottom .child-bord{
   display: inline-flex;
+  align-items: center;
+  overflow-x: scroll;
   width: 80%;
   height: 100%;
 }
@@ -292,5 +355,8 @@ section{
   margin: 0 20px;
   display: inline-block;
   width: 120px;
-  height: 100%;
+  flex: 0 0 auto;
+  height: 90%;
+  background-color: rgba(255, 245, 155, 0.5);
+  border: 2px solid rgba(255, 245, 155, 0.9);
 }

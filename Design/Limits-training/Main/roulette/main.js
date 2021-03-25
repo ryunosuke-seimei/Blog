@@ -39,8 +39,8 @@ let app = new Vue({
     ],
     left_id:1,
     right_id:0,
-    left_display:"",
-    right_display:"",
+    left_display:"新しい",
+    right_display:"世界",
     roulette_obj:null,
     roulette_flag: false,
 
