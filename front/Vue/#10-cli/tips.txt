@@ -1,0 +1,9 @@
+VueCliをインストールしたいね
+
+https://macoblog.com/vuejs-benkyou-matome/#h-anker13
+↑とりあえずサンプル変更！！
+
+npm run build
+distに作られる！
+
+とりあえずsampleは作成できた
