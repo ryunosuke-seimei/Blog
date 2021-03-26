@@ -1,0 +1,10 @@
+https://youtu.be/uR7EbQImYmo
+↑リンク
+
+https://dekiru.net/article/13256/
+backface-visibility: hidden;
+
+3D空間の後ろ背面の隠し方
+
+http://www.htmq.com/css3/perspective.shtml
+背景の要素
