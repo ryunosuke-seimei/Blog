@@ -16,3 +16,9 @@ https://qiita.com/takupeso/items/87b7394ef5290ea6c502
 
 https://vuex.vuejs.org/ja/
 ↑公式リファレンス
+
+
+vue.config.jsに書き込みが必要やで！！
+module.exports = {
+  publicPath: './'
+}

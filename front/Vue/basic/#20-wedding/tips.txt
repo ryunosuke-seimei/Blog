@@ -1,0 +1,16 @@
+毎回
+npm install --save vue-router
+と
+npm install --save vuex
+は必要みたい
+
+msg="Welcome to Your Vue.js App"
+渡すと
+{{msg}}で受け取れる？？
+
+ちなみに
+render: hってなんぞやってのを解消する
+https://qiita.com/teinen_qiita/items/ed1bb1909a17f9ca9daa
+
+ルーティングの設定方法とかの観点
+https://qiita.com/ksh-fthr/items/a4ac1d04d9923c550cd7
