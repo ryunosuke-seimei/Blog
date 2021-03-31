@@ -33,23 +33,29 @@ export default {
   box-sizing: content-box;
   border-bottom: 2.5px solid black;
 
+  background-color: rgba(244, 174, 228, 0.2);
+  color: #2c3e50;
 }
-.title{
+#header .title{
   display: inline-flex;
-  width: 120px;
+  width: auto;
   height: 100%;
   align-items:center;
   justify-content: center;
-
+  margin-left: 20px;
 }
-.sub-links{
+#header .title a{
+  font-size: 25px;
+}
+
+#header .sub-links{
   display: inline-flex;
   width: 240px;
   height: 100%;
   align-items: center;
   justify-content: space-around;
 }
-.sub-links li{
+#header .sub-links li{
   display: inline-flex;
   width: 100px;
   height: 100%;;
@@ -57,12 +63,10 @@ export default {
   align-items: center;
 
 }
-a{
-  color: black;
+#header a{
+  font-size: 20px;
   border: none;
   text-decoration: none;
-  width: 100%;
-  height: 100%;
   text-align: center;
 }
 </style>

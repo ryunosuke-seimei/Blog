@@ -1,0 +1,7 @@
+https://qiita.com/watamura/items/51c70fbb848e5f956fd6
+
+https://qiita.com/newt0/items/aeddc6a179ea3a464ed5
+
+AtomでのVueの開発に若干の嫌気が差してVSCodeを使ってみる！
+Designとパーツ検証はAtomで
+がっつりの開発はVSCodeで開発していく！

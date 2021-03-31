@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+section{
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.circle{
+  position: absolute;
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+
+  animation: 1s move infinite linear;
+
+}
+.circle .box{
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  position: relative;
+}
+
+.box:nth-child(1){
+  background-color: red;
+}
+.box:nth-child(2){
+  background-color: green;
+}
+.box:nth-child(3){
+  background-color: yellow;
+}
+.box:nth-child(4){
+  background-color: black;
+}
+@keyframes move {
+  0%{
+    transform: rotateZ(0);
+  }
+  100%{
+    transform: rotateZ(360deg);
+  }
+}

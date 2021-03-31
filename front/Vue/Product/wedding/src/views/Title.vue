@@ -1,5 +1,8 @@
 <template>
   <div id="title">
+    <div class="img">
+      <img src="../assets/back.jpg" alt="">
+    </div>
     <div class="title">
       Demo sample
     </div>
@@ -23,12 +26,33 @@ export default {
 
 <style>
 #title{
+  position: relative;
   display: inline-flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  background-color: rgba(244, 174, 228, 0.2);
+
 }
+#title .img{
+  display: inline-block;
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 0;
+  z-index: -9;
+
+  width: 100%;
+  height: 80%;
+}
+#title .img img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 #title .title{
+  position: relative;
   display: inline-flex;
   width: 100%;
   height: 50%;
@@ -37,6 +61,8 @@ export default {
 
   font-size: 100px;
 }
+
+
 #title .sub-links{
   display: inline-flex;
   width: 100%;
@@ -51,12 +77,12 @@ export default {
   justify-content: center;
   align-items: center;
 
-
-  border: 5px solid rgba(0, 0, 0, 0.4);
   font-size: 50px;
+
 }
-a{
-  color: black;
+
+#title .sub-links li a{
+  color: #2c3e50;
   border: none;
   text-decoration: none;
   width: 100%;

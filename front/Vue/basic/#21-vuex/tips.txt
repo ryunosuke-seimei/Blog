@@ -1,0 +1,26 @@
+https://blog.codecamp.jp/vuejp-vuex-commentary
+
+https://qiita.com/MatakiTanaka09/items/8cdccf54164f782ad2e8
+
+ざっくりとした理解が進んだ
+関連ステータスを書き込んでそれを読み込む
+global data
+
+titleとか絶対変わらないステータスを保存するのいいかもね
+全体で変わらない値などを保存するステータス？
+個人的な状態保存を行える？？？？
+
+https://note.com/niba1122/n/n0dd76bd7b49c
+注意事項があるみたい
+必要な場合以外は、回避するようにしたいと思う。
+
+import store from './store'
+main.jsに書き込み
+store.jsで作成して
+computed:{
+    title(){
+        return this.$store.state.title
+    }
+}
+で引っ張ってくる
+https://qiita.com/yukibe/items/3f293a446b0c280d6809
