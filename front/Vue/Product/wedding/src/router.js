@@ -24,7 +24,7 @@ const router = new VueRouter({
       component: All
     }
   ],
-  base: "/demo/vue-sample/"
+  // base: "/demo/vue-sample/"
 })
 // 生成したVueRouterインスタンスをエクスポート
 export default router

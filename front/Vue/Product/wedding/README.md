@@ -64,3 +64,6 @@ https://qiita.com/idani/items/3651f547373250a7a643
 ### file structure
 phpのなかにバックエンドの処理をまとめた系
 photoとsmall_photoを取得
+
+### npm run serveが動かない
+https://ysko909.github.io/posts/fix-vue-cli-service-command-not-found-error/

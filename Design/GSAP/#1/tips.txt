@@ -1,0 +1,19 @@
+https://ics.media/entry/7162/
+↑タイムリマップ的表現の基礎が書いてある
+
+gsap.to("#rect", 2.0, { x: 800, rotate: 360 })
+ターゲット　時間　目標状態
+中間の動きは補完してくれる
+
+コールバックとして追加での動作を埋め込むことができる
+
+https://greensock.com/docs/v3/GSAP/
+↑公式リファレンス
+
+
+let target = gsap.timeline();
+target.to().to()
+で続けて書くことで、一つの動きとしてタイムスケールのように動かせることができる
+
+
+第四引数はdelay

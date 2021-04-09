@@ -1,0 +1,17 @@
+body {
+  background: #000000;
+}
+.box1, .box2,.box3 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+#rect {
+  width: 100px;
+  height: 100px;
+  top: 200px;
+  position: relative;
+  border: 2px red solid;
+}

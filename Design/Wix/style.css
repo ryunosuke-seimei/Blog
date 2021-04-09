@@ -1,0 +1,224 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+header{
+  display: inline-flex;
+  width: 100%;
+  height: 100px;
+  justify-content:space-between;
+  align-items: center;
+  background-color: white;
+}
+header .logo{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+}
+header .logo img{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+header .links{
+  display: inline-flex;
+  width: auto;
+  height: 100%;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+header .links li{
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+  margin: 0 20px;
+  margin-bottom: 20px;
+  list-style: none;
+  box-sizing: border-box;
+  transition: 1s;
+}
+.links .active{
+  border-bottom: 2px solid black;
+}
+
+section{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+}
+section .top{
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: 60vh;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+section .top .image{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+section .top .image img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+section .top .title{
+  display: inline-flex;
+  text-align: center;
+  font-size: 60px;
+}
+
+section .bord{
+  display: inline-flex;
+  width: 100%;
+  height: 50vh;
+}
+section .reverse{
+  flex-direction: row-reverse;
+}
+section .mild{
+  height: 40vh;
+}
+section .bord .content{
+  display: inline-flex;
+  flex-direction: column;
+  height: 100%;
+  width: 40%;
+  align-items: center;
+
+  background-color: white;
+}
+section .bord .content .title{
+  display: inline-block;
+  width: 80%;
+  font-size: 40px;
+  margin-top: 60px;
+  letter-spacing: 2.5px;
+}
+section .bord .content .minus{
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+section .bord .content .sentence{
+  display: inline-block;
+  margin-top: 10px;
+  width: 80%;
+  font-size: 18px;
+  line-height: 35px;
+  color: rgba(0,0,0,0.7);
+}
+section .bord .image{
+  display: inline-flex;
+  height: 100%;
+  width: 60%;
+}
+section .bord .image img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+section .middle{
+  display: inline-flex;
+  background-color: rgb(164, 135, 94);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+section .middle .title{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 45px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  height: 60px;
+  font-family: palatino linotype,serif;
+}
+section .middle .humans{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+section .middle .humans .human{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 500px;
+}
+section .middle .humans .human .image{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 50px;
+  overflow: hidden;
+  background-color: white;
+}
+section .middle .humans .human .image img{
+  object-fit: cover;
+}
+
+section .middle .humans .human .card{
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px 0 ;
+}
+section .middle .humans .human .card span{
+  display: inline-block;
+  width: 100%;
+  font-family: didot-w01-italic,serif;
+}
+section .middle .humans .human .card .position{
+  font-size: 10px;
+}
+section .middle .humans .human .card .name{
+  text-align: center;
+  font-size: 35px;
+  line-height: 40px;
+  font-style: italic;
+}
+section .middle .humans .human .content{
+  display: inline-block;
+  width: 80%;
+  font-size: 8px;
+}
+footer{
+  display: inline-flex;
+  width: 100%;
+  height: 30vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}

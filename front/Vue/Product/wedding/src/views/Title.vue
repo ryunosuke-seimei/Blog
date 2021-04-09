@@ -4,7 +4,7 @@
       <img src="../assets/back.jpg" alt="">
     </div>
     <div class="title">
-      Demo sample
+      {{title}}
     </div>
     <div class="sub-links">
       <li>
@@ -21,6 +21,11 @@
 <script>
 export default {
   name: 'Title',
+  computed:{
+      title(){
+          return this.$store.state.title
+      }
+  }
 }
 </script>
 
